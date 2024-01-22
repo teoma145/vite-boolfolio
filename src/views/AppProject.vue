@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>sass</h1>
+        <li v-for="project in store.projects" :key="project.id" >{{ project.name }}</li>
     </div>
 </template>
 
@@ -16,12 +16,15 @@
             }
         },
         methods:{
-            getAllPost(){
+            getAllProjects(){
                 axios.get(`${this.store.apiBaseUrl}projects`).then((res)=>{
                     console.log(res.data);
-                    this.store.projects = res.data
+                    this.store.projects = res.data.results;
                 })
             }
+        },
+        created(){
+            this.getAllProjects()
         }
     }
 </script>
