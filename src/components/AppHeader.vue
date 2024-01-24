@@ -11,6 +11,9 @@
         <li class="nav-item">
           <RouterLink to="/" class="nav-link active" aria-current="page">Home</RouterLink>
         </li>
+        <li class="nav-item">
+          <RouterLink to="/contacts" class="nav-link">Contacts</RouterLink>
+        </li>
         
         <RouterLink to="/projects" class="nav-link">Projects</RouterLink>
       </ul>
